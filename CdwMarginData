@@ -1,0 +1,294 @@
+package com.ntrs.cdwfeed;
+import java.sql.Date;
+import com.ntrs.dis.util.DISProperties;
+
+public class CdwMarginData {
+     
+  
+	private  DISProperties brokerStatementProperty;
+	private  float accountInitMargin;
+	private  float initialMargin;
+	private  float variationMargin;
+	private  float accruedInterest;
+	private  float totalPostedCollateral;
+	
+	
+	private  String account_id;
+	private  Date asOfDate;
+	private  float notional;
+	private String tradeId;
+	private String brokerBicCode;
+	private String accountIdAsOfDate;
+
+	private String currency;
+	
+	private float totalInitialMargin;
+	private float totalVariationMargin;
+	private float totalAccruedInterest;
+	
+	
+	
+    /*
+	 * Set the brokerstatementProperty when constructing the 
+	 * Object
+	 * */
+	public CdwMarginData(DISProperties brokerStatementProperty,String tradeId,
+			float totalInitialMargin, float totalVariationMargin,
+			float totalAccruedInterest,float totalPostedCollateral,String brokerBicCode, String currency){
+		
+		this.setTotalInitialMargin(totalInitialMargin);
+		this.setTradeId(tradeId);
+		this.setTotalVariationMargin(totalVariationMargin);
+		this.setTotalAccruedInterest(totalAccruedInterest);
+		this.setBrokerBicCode(brokerBicCode);
+		this.setCurrency(currency);		
+		this.setTotalPostedCollateral(totalPostedCollateral);
+		
+	}
+	
+	public CdwMarginData(DISProperties brokerStatementProperty){
+		this.brokerStatementProperty = brokerStatementProperty;
+	}
+	/**
+	 * @return the totalVariationMargin
+	 */
+	public float getTotalVariationMargin() {
+		return totalVariationMargin;
+	}
+
+
+	/**
+	 * @return the totalInitialMargin
+	 */
+	public float getTotalInitialMargin() {
+		return totalInitialMargin;
+	}
+
+
+	/**
+	 * @param totalInitialMargin the totalInitialMargin to set
+	 */
+	public void setTotalInitialMargin(float totalInitialMargin) {
+		this.totalInitialMargin = totalInitialMargin;
+	}
+
+
+	/**
+	 * @param totalVariationMargin the totalVariationMargin to set
+	 */
+	public void setTotalVariationMargin(float totalVariationMargin) {
+		this.totalVariationMargin = totalVariationMargin;
+	}
+
+
+	/**
+	 * @return the totalAccruedInterest
+	 */
+	public float getTotalAccruedInterest() {
+		return totalAccruedInterest;
+	}
+
+
+	/**
+	 * @param totalAccruedInterest the totalAccruedInterest to set
+	 */
+	public void setTotalAccruedInterest(float totalAccruedInterest) {
+		this.totalAccruedInterest = totalAccruedInterest;
+	}
+
+
+	/**
+	 * @return the accountInitMargin
+	 */
+	public float getAccountInitMargin() {
+		return accountInitMargin;
+	}
+
+	/**
+	 * @param accountInitMargin the accountInitMargin to set
+	 */
+	public void setAccountInitMargin(float accountInitMargin) {
+		this.accountInitMargin = accountInitMargin;
+	}
+
+	/**
+	 * @return the initailMargin
+	 */
+	public float getInitialMargin() {
+		return initialMargin;
+	}
+
+	/**
+	 * @param initailMargin the initailMargin to set
+	 */
+	public void setInitialMargin(float initialMargin) {
+		this.initialMargin = initialMargin;
+	}
+
+	/**
+	 * @return the variationMargin
+	 */
+	public float getVariationMargin() {
+		return variationMargin;
+	}
+
+	/**
+	 * @param variationMargin the variationMargin to set
+	 */
+	public void setVariationMargin(float variationMargin) {
+		this.variationMargin = variationMargin;
+	}
+
+	/**
+	 * @return the accruedInterest
+	 */
+	public float getAccruedInterest() {
+		return accruedInterest;
+	}
+
+	/**
+	 * @param accruedInterest the accruedInterest to set
+	 */
+	public void setAccruedInterest(float accruedInterest) {
+		this.accruedInterest = accruedInterest;
+	}
+
+	/**
+	 * @return the totalPostedCollateral
+	 */
+	public float getTotalPostedCollateral() {
+		return totalPostedCollateral;
+	}
+
+	/**
+	 * @param totalPostedCollateral the totalPostedCollateral to set
+	 */
+	public void setTotalPostedCollateral(float totalPostedCollateral) {
+		
+		this.totalPostedCollateral = totalPostedCollateral ;
+	}
+
+	/**
+	 * @return the account_id
+	 */
+	public String getAccount_id() {
+		return account_id;
+	}
+
+
+	/**
+	 * @param account_id the account_id to set
+	 */
+	public void setAccount_id(String account_id) {
+		this.account_id = account_id;
+	}
+
+
+	/**
+	 * @return the asOfDate
+	 */
+	public Date getAsOfDate() {
+		return asOfDate;
+	}
+
+
+	/**
+	 * @param asOfDate the asOfDate to set
+	 */
+	public void setAsOfDate(Date asOfDate) {
+		this.asOfDate = asOfDate;
+	}
+
+
+	/**
+	 * @return the notional
+	 */
+	public float getNotional() {
+		return notional;
+	}
+
+
+	/**
+	 * @param notional the notional to set
+	 */
+	public void setNotional(float notional) {
+		this.notional = notional;
+	}
+
+
+	/**
+	 * @return the tradeId
+	 */
+	public String getTradeId() {
+		return tradeId;
+	}
+
+
+	/**
+	 * @param tradeId the tradeId to set
+	 */
+	public void setTradeId(String tradeId) {
+		this.tradeId = tradeId;
+	}
+
+
+	/**
+	 * @return the brokerBicCode
+	 */
+	public String getBrokerBicCode() {
+		return brokerBicCode;
+	}
+
+
+	/**
+	 * @param brokerBicCode the brokerBicCode to set
+	 */
+	public void setBrokerBicCode(String brokerBicCode) {
+		this.brokerBicCode = brokerBicCode;
+	}
+
+
+	/**
+	 * @return the currency
+	 */
+	public String getCurrency() {
+		return currency;
+	}
+
+
+	/**
+	 * @param currency the currency to set
+	 */
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+	/**
+	 * @param accountIdAsOfDate the accountIdAsOfDate to set
+	 */
+	public void setAccountIdAsOfDate(String accountId,String asOfDate) {
+		this.accountIdAsOfDate = this.account_id+"$"+this.asOfDate;
+	}
+
+
+	/**
+	 * @return the accountIdAsOfDate
+	 */
+	public String getAccountIdAsOfDate() {
+		return accountIdAsOfDate;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	public boolean equals(Object cdwMarginData){
+		CdwMarginData cdw = (CdwMarginData)cdwMarginData;
+		boolean isEqual = false;
+		if(getAccount_id().equals(cdw.getAccount_id())&& getAsOfDate().toString().equals(cdw.getAsOfDate().toString())) isEqual = true;
+		return isEqual;
+	}
+
+
+
+	
+	
+}
