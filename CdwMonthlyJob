@@ -1,0 +1,17 @@
+package com.ntrs.cdwfeed;
+
+
+
+/**
+ * Description: This java class is to generate the csv file containing the collateral 
+ * data for treasury trades
+ */
+public class CdwMonthlyJob {
+  
+	public static void main(String args[]) {
+		
+		CdwTreasuryCollateral cdw = new CdwTreasuryCollateral();
+		cdw.executeQuery();
+	}
+}
+
